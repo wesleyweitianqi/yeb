@@ -1,0 +1,81 @@
+#port
+server:
+  port: 8085
+  
+  #database config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://124.222.65.63:3306/124.222.65.63?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: wei123
+  
+  #pool
+    hikari:
+      pool-name: DateHikariCP
+      minimum-idle: 5
+       #idle max conn time, default = 10 mins
+      idle-timeout: 180000
+      #max pool size
+      maximum-pool-size: 10
+      #auto commit
+      auto-commit: true
+      #max lifetime 30 mins
+      max-lifetime: 1800000
+      #conn timeout 30s
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  
+  # redis
+  #redis address
+  #spring.redis.host=127.0.0.1
+  redis:
+    host: 192.168.110.130
+    port: 6379
+    #database
+    database: 1
+    timeout: 10000s
+    #password
+    #spring.redis.password=root
+
+    # max conn size
+    lettuce:
+      pool.max-active: 1024
+
+      pool.max-wait: 10000ms
+
+      pool.max-idle: 200
+
+      pool.min-idle: 5
+  
+  #Mybatis-plus config
+  
+mybatis-plus:
+  #mapper config
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  #data return alias
+  type-aliases-package: com.example.server.pojo
+
+  configuration:
+    map-underscore-to-camel-case: false
+  
+  ## Mybatis SQL
+logging:
+  level:
+    com.wesley.server.mapper: debug
+
+#jwt:
+#  tokenHeader: Authorization
+#  secret: yeb-secret
+#  expiration: 604800
+#  tokenHead: Bearer
+  
+#  # \u6D88\u606F\u961F\u5217
+#spring.rabbitmq.username=guest
+#spring.rabbitmq.password=guest
+#spring.rabbitmq.host=172.16.100.4
+#spring.rabbitmq.port=5672
+#  # \u6D88\u606F\u786E\u8BA4\u56DE\u8C03
+#spring.rabbitmq.publisher-confirm-type=correlated
+#  # \u6D88\u606F\u5931\u8D25\u56DE\u8C03
+#spring.rabbitmq.publisher-returns=true
