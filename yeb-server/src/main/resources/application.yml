@@ -3,7 +3,6 @@ server:
   port: 8081
 
 spring:
-
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://43.134.190.143:3306/yeb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
@@ -52,10 +51,9 @@ spring:
     publisher-confirm-type: correlated
     publisher-returns: true
 
-
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*Mapper.xml
-  type-aliases-package: com.xxxx.server.pojo
+  type-aliases-package: com.wesley.server.pojo
   configuration:
     map-underscore-to-camel-case: false
 
@@ -68,4 +66,3 @@ jwt:
   secret: yeb-secret
   expiration: 604800
   tokenHead: Bearer
-
