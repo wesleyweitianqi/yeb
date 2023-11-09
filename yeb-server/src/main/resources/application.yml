@@ -51,6 +51,11 @@ spring:
     publisher-confirm-type: correlated
     publisher-returns: true
 
+
+  main:
+    allow-circular-references: true
+
+
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*Mapper.xml
   type-aliases-package: com.wesley.server.pojo

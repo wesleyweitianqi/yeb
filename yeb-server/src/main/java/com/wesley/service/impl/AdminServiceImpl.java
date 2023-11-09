@@ -32,7 +32,8 @@ import java.util.Map;
 @Service
 public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements IAdminService {
     @Autowired
-    private UserDetailsService userDetailsService;
+    private  UserDetailsService userDetailsService;
+
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
@@ -41,6 +42,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     private JwtTokenUtil jwtTokenUtil;
     @Value("${jwt.tokenHead}")
     private String tokenHead;
+
     /**
      * return token after login
      * @param username
