@@ -11,9 +11,12 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.experimental.Accessors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * <p>
@@ -48,7 +51,8 @@ public class Admin implements Serializable, UserDetails {
     @ApiModelProperty(value = "address")
     private String address;
 
-    @ApiModelProperty(value = "on")
+    @NotNull
+    @ApiModelProperty(value = "enabled")
     private Boolean enabled;
 
     @ApiModelProperty(value = "username")
@@ -80,12 +84,16 @@ public class Admin implements Serializable, UserDetails {
     }
 
     @Override
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
-    @Override
-    public boolean isEnabled() {
-        return enabled;
-    }
+
+
+
 }

@@ -17,4 +17,6 @@ public class AdminLoginParam {
     private String username;
     @ApiModelProperty(value="password", required = true)
     private String password;
+    @ApiModelProperty(value="captcha",required = true)
+    private String code;
 }

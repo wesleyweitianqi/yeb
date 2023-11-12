@@ -5,9 +5,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://43.134.190.143:3306/yeb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    username: yeb
-    password: yeb
+    url: jdbc:mysql://127.0.0.1:3308/yeb?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: wei123
 
     hikari:
 
@@ -65,6 +65,7 @@ mybatis-plus:
 logging:
   level:
     com.wesley.server.mapper: debug
+#    org.mybatis: debug
 
 jwt:
   tokenHeader: Authorization

@@ -8,6 +8,8 @@ import com.wesley.pojo.RespBean;
 import com.wesley.service.AdminService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wesley.service.IAdminService;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.poi.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -43,6 +45,9 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     @Value("${jwt.tokenHead}")
     private String tokenHead;
 
+    @Autowired
+    private  IAdminService iAdminService;
+
     /**
      * return token after login
      * @param username
@@ -51,11 +56,16 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
      * @return
      */
     @Override
-    public RespBean login(String username, String password, HttpServletRequest request){
-
+    public RespBean login(String username, String password, String code, HttpServletRequest request){
+        String captcha =(String) request.getSession().getAttribute("captcha");
+        System.out.println(captcha);
+        System.out.println(code);
+        if(StringUtils.isEmpty(code) || !captcha.equalsIgnoreCase(code)){
+            return RespBean.error("captcha is wrong, please reenter");
+        }
         //login
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-        if(null == userDetails || passwordEncoder.matches(password, userDetails.getPassword())){
+        if(null == userDetails ){
             return RespBean.error("username or password is wrong");
         }
         if(!userDetails.isEnabled()){
@@ -79,4 +89,19 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     public Admin getAdminByUserName(String username){
         return adminMapper.selectOne(new QueryWrapper<Admin>().eq("username", username).eq("enabled", true));
     }
+
+    public void changePasswordForAdmin(String newPassword) {
+        // Step 1: Retrieve the user by username
+        Admin admin = iAdminService.getAdminByUserName("admin");
+
+        // Step 2: Update the password
+        if (admin != null) {
+            admin.setPassword(passwordEncoder.encode(newPassword));
+
+            // Step 3: Save the updated user to the database
+            iAdminService.updateById(admin);
+        }
+    }
+
+
 }
