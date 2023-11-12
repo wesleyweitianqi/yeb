@@ -24,7 +24,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("t_appraise")
-@ApiModel(value="Appraise对象", description="")
+@ApiModel(value="AppraiseObj", description="")
 public class Appraise implements Serializable {
 
     private static final long serialVersionUID=1L;
@@ -33,7 +33,7 @@ public class Appraise implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "员工id")
+    @ApiModelProperty(value = "employeeId")
     private Integer eid;
 
     @ApiModelProperty(value = "考评日期")

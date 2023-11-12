@@ -23,7 +23,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("t_admin_role")
-@ApiModel(value="AdminRole对象", description="")
+@ApiModel(value="AdminRoleObject", description="")
 public class AdminRole implements Serializable {
 
     private static final long serialVersionUID=1L;
@@ -32,11 +32,11 @@ public class AdminRole implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "用户id")
+    @ApiModelProperty(value = "userid")
     @TableField("adminId")
     private Integer adminId;
 
-    @ApiModelProperty(value = "权限id")
+    @ApiModelProperty(value = "permissionId")
     private Integer rid;
 
 
