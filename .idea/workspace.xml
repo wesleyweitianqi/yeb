@@ -4,24 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0c99db-8ab0-420e-82b9-42bda3561117" name="Changes" comment="swagger documentation config">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/security/CaptchaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/CaptchaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/NewPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/PasswordController.java" afterDir="false" />
+    <list default="true" id="4a0c99db-8ab0-420e-82b9-42bda3561117" name="Changes" comment="captcha config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/security/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/security/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/security/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/security/JwtTokenUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/AdminLoginParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/AdminLoginParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/MenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/IAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/MenuService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699799509737</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="captcha config">
+      <created>1699826009632</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699826009632</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +234,8 @@
     <MESSAGE value="SecurityConfig setup" />
     <MESSAGE value="JwtAuthentication" />
     <MESSAGE value="swagger documentation config" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger documentation config" />
+    <MESSAGE value="captcha config" />
+    <option name="LAST_COMMIT_MESSAGE" value="captcha config" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

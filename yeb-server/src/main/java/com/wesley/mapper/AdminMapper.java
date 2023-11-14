@@ -2,6 +2,9 @@ package com.wesley.mapper;
 
 import com.wesley.pojo.Admin;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.wesley.pojo.Menu;
+
+import java.util.List;
 
 /**
  * <p>

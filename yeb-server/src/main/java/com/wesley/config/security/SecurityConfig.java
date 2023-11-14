@@ -37,8 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers(
-                "/login",
-                "logout",
+
                 "/css/**",
                 "/js/**",
                 "index.html",
@@ -62,6 +61,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
+                .antMatchers("/logout").permitAll()
+                .antMatchers("/login").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
