@@ -28,13 +28,9 @@ spring:
       connection-test-query: SELECT 1
 
   redis:
-
     timeout: 10000ms
-
     host: localhost
-
     port: 6379
-
     database: 0
     lettuce:
       pool:
@@ -64,7 +60,7 @@ mybatis-plus:
 
 logging:
   level:
-    com.wesley.server.mapper: debug
+    com.wesley.mapper: debug
 #    org.mybatis: debug
 
 jwt:
