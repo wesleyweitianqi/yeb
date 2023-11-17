@@ -58,7 +58,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 "/v2/api-docs/**",
                 "/hello",
                 "/change-password",
-                "/captcha"
+                "/captcha",
+                "/login",
+                "/logout"
         );
     }
 

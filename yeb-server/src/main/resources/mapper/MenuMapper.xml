@@ -32,7 +32,7 @@
     </resultMap>
 
     <resultMap id="MenusWithRole" type="com.wesley.pojo.Menu" extends="BaseResultMap">
-        <collection property="role" ofType="com.wesley.pojo.Role">
+        <collection property="roles" ofType="com.wesley.pojo.Role">
             <id column="rid" property="id" />
             <result column="rname" property="name" />
             <result column="rnameZh" property="nameZh" />

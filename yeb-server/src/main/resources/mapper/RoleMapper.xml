@@ -14,7 +14,7 @@
         id, name, nameZh
     </sql>
 
-    <select id="getRoles" resultMap="com.wesley.pojo.Role" >
+    <select id="getRoles" resultType="com.wesley.pojo.Role" >
         SELECT
         r.id,
         r.`name`,

@@ -22,19 +22,6 @@ public interface MenuMapper extends BaseMapper<Menu> {
      * @return
      */
     List<Menu> getMenusByAdminId(Integer id);
-    @Select("  SELECT\n" +
-            "        m.*,\n" +
-            "        r.id AS rid,\n" +
-            "        r.`name` AS rname,\n" +
-            "        r.nameZh AS rnameZh\n" +
-            "        FROM\n" +
-            "        t_menu m,\n" +
-            "        t_menu_role mr,\n" +
-            "        t_role r\n" +
-            "        WHERE\n" +
-            "        m.id = mr.mid\n" +
-            "        AND mr.rid = r.id\n" +
-            "        ORDER BY\n" +
-            "        m.id")
+
     List<Menu> getMenusWithRole();
 }

@@ -80,7 +80,7 @@ public class Admin implements Serializable, UserDetails {
         List<SimpleGrantedAuthority> authorities = roles.stream()
                 .map(role -> new SimpleGrantedAuthority(role.getName()))
                 .collect(Collectors.toList());
-        return null;
+        return authorities;
     }
 
     @Override

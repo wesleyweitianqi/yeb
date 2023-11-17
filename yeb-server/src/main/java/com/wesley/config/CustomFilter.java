@@ -29,7 +29,7 @@ public class CustomFilter implements FilterInvocationSecurityMetadataSource {
 
     @Override
     public boolean supports(Class<?> aClass) {
-        return false;
+        return true;
     }
 
     @Override
