@@ -31,8 +31,6 @@ public class PositionController {
     @ApiOperation(value = "get all positions")
     @GetMapping("/all")
     public List<Position> getAllPositions(){
-        System.out.println("getall");
-        System.out.println(positionService.list().toString());
         return positionService.list();
     }
 

@@ -1,10 +1,13 @@
 package com.wesley.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -36,9 +39,12 @@ public class Joblevel implements Serializable {
     private String name;
 
     @ApiModelProperty(value = "职称等级")
+    @TableField("title_level")
     private String titleLevel;
 
     @ApiModelProperty(value = "创建时间")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "Asia/Shanghai")
+    @TableField("create_date")
     private LocalDateTime createDate;
 
     @ApiModelProperty(value = "是否启用")

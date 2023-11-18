@@ -15,6 +15,6 @@ public class GlobalException {
         if (e instanceof SQLIntegrityConstraintViolationException){
             return RespBean.error("Operation failed due to data-related issues!");
         }
-        return RespBean.error("database exception");
+        return null;
     }
 }
