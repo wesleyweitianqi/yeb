@@ -36,6 +36,7 @@ public class CustomFilter implements FilterInvocationSecurityMetadataSource {
     public Collection<ConfigAttribute> getAttributes(Object o) throws IllegalArgumentException {
         //get request url
         String requestUrl = ((FilterInvocation) o).getRequestUrl();
+        System.out.println("requestURL is +++++" + requestUrl);
         //get role menus
         List<Menu> menus = menuService.getMenusWithRole();
         for (Menu menu : menus) {

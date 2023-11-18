@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0c99db-8ab0-420e-82b9-42bda3561117" name="Changes" comment="RBAC config">
+    <list default="true" id="4a0c99db-8ab0-420e-82b9-42bda3561117" name="Changes" comment="CustomFilter to check url menus">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/CustomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/CustomFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/CustomUrlDecisonManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/CustomUrlDecisonManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/MenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/PositionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/PositionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700024611763</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="CustomFilter to check url menus">
+      <created>1700193159462</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700193159462</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,7 +260,8 @@
     <MESSAGE value="fix jwt authheader &amp; get menu list" />
     <MESSAGE value="redis config" />
     <MESSAGE value="RBAC config" />
-    <option name="LAST_COMMIT_MESSAGE" value="RBAC config" />
+    <MESSAGE value="CustomFilter to check url menus" />
+    <option name="LAST_COMMIT_MESSAGE" value="CustomFilter to check url menus" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
