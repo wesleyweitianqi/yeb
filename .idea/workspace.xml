@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0c99db-8ab0-420e-82b9-42bda3561117" name="Changes" comment="joblever controller">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/PermissionController.java" afterDir="false" />
+    <list default="true" id="4a0c99db-8ab0-420e-82b9-42bda3561117" name="Changes" comment="PermissionController">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/PermissionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/MenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/MenuRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/mapper/MenuRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/MenuRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/MenuRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/MenuRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/MenuRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuRoleMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700329075951</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="PermissionController">
+      <created>1700365516239</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700365516239</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,7 +297,8 @@
     <MESSAGE value="position crud" />
     <MESSAGE value="GlobalException config" />
     <MESSAGE value="joblever controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="joblever controller" />
+    <MESSAGE value="PermissionController" />
+    <option name="LAST_COMMIT_MESSAGE" value="PermissionController" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

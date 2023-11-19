@@ -20,4 +20,6 @@ import java.util.List;
 public interface MenuService extends IService<Menu> {
     public List<Menu> getMenusByAdminId();
     List<Menu> getMenusWithRole();
+
+    List<Menu> getAllMenus();
 }

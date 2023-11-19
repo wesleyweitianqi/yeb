@@ -1,7 +1,9 @@
 package com.wesley.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.wesley.pojo.MenuRole;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wesley.pojo.RespBean;
 
 /**
  * <p>
@@ -12,5 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2023-11-05
  */
 public interface MenuRoleService extends IService<MenuRole> {
+    RespBean updateMenuRole(Integer rid, Integer[] mids);
+
 
 }

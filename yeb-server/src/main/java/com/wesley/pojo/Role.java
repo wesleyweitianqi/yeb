@@ -23,7 +23,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("t_role")
-@ApiModel(value="Role对象", description="")
+@ApiModel(value="Role", description="")
 public class Role implements Serializable {
 
     private static final long serialVersionUID=1L;
@@ -32,10 +32,10 @@ public class Role implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "名称")
+    @ApiModelProperty(value = "name")
     private String name;
 
-    @ApiModelProperty(value = "角色名称")
+    @ApiModelProperty(value = "nameZh")
     @TableField("nameZh")
     private String nameZh;
 
