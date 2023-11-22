@@ -12,9 +12,27 @@
         <result column="isParent" property="isParent" />
     </resultMap>
 
+    <resultMap id="DepartmentWithChildren" type="com.wesley.pojo.Department" extends="BaseResultMap">
+        <collection
+                property="children"
+                ofType="com.wesley.pojo.Department"
+                select="com.wesley.mapper.DepartmentMapper.getAllDepartmentsByParentId"
+                column="id">
+        </collection>
+    </resultMap>
+
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, name, parentId, depPath, enabled, isParent
     </sql>
+
+    <select id="getAllDepartmentsByParentId" resultMap="DepartmentWithChildren">
+        select
+        <include refid="Base_Column_List" />
+        from
+        t_department
+        where parentId = #{parentId}
+
+    </select>
 
 </mapper>

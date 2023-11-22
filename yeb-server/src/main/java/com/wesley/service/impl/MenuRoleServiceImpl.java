@@ -9,6 +9,7 @@ import com.wesley.service.MenuRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -25,7 +26,9 @@ public class MenuRoleServiceImpl extends ServiceImpl<MenuRoleMapper, MenuRole> i
     private MenuRoleService menuRoleService;
     @Autowired
     private MenuRoleMapper menuRoleMapper;
+
     @Override
+    @Transactional
     public RespBean updateMenuRole(Integer rid, Integer[] mids) {
         menuRoleMapper.delete(new QueryWrapper<MenuRole>().eq("rid", rid));
         if(null == mids || 0 == mids.length){

@@ -3,6 +3,8 @@ package com.wesley.mapper;
 import com.wesley.pojo.Department;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.util.List;
+
 /**
  * <p>
  *  Mapper 接口
@@ -12,5 +14,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2023-11-05
  */
 public interface DepartmentMapper extends BaseMapper<Department> {
-
+    List<Department> getAllDepartmentsByParentId(Integer parentId);
 }
