@@ -36,6 +36,13 @@
         )
     </select>
 
+    <select id="delDep" statementType="CALLABLE">
+        call delDep(
+        #{id, mode=IN, jdbcType = INTEGER},
+        #{result, mode=OUT, jdbcType=INTEGER}
+        )
+    </select>
+
     <select id="getAllDepartments" resultMap="DepartmentWithChildren">
         select
         <include refid="Base_Column_List" />

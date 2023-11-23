@@ -6,11 +6,9 @@ import com.wesley.pojo.RespBean;
 import com.wesley.service.DepartmentService;
 import com.wesley.service.impl.DepartmentServiceImpl;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
 
@@ -40,6 +38,12 @@ public class DepartmentController {
     @PostMapping("/")
     public RespBean addDep(@RequestBody Department dep){
         return departmentService.addDep(dep);
+    }
+
+    @ApiOperation(value = "delete Dep")
+    @DeleteMapping("/")
+    public  RespBean delDep(@RequestBody Integer id) {
+        return departmentService.delDep(id);
     }
 }
 
