@@ -2,6 +2,7 @@ package com.wesley.service;
 
 import com.wesley.pojo.Department;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wesley.pojo.RespBean;
 
 import java.util.List;
 
@@ -15,4 +16,6 @@ import java.util.List;
  */
 public interface DepartmentService extends IService<Department> {
     List<Department> getAllDepartments();
+
+    RespBean addDep(Department dep);
 }

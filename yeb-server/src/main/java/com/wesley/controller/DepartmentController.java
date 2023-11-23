@@ -2,11 +2,14 @@ package com.wesley.controller;
 
 
 import com.wesley.pojo.Department;
+import com.wesley.pojo.RespBean;
 import com.wesley.service.DepartmentService;
 import com.wesley.service.impl.DepartmentServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
@@ -31,6 +34,12 @@ public class DepartmentController {
     @GetMapping("/")
     public List<Department> getAllDepartment(){
         return departmentService.getAllDepartments();
+    }
+
+    @ApiOperation(value = "addDep")
+    @PostMapping("/")
+    public RespBean addDep(@RequestBody Department dep){
+        return departmentService.addDep(dep);
     }
 }
 

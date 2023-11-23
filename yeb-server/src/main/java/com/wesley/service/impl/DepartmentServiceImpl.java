@@ -2,6 +2,7 @@ package com.wesley.service.impl;
 
 import com.wesley.pojo.Department;
 import com.wesley.mapper.DepartmentMapper;
+import com.wesley.pojo.RespBean;
 import com.wesley.service.DepartmentService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,16 @@ public class DepartmentServiceImpl extends ServiceImpl<DepartmentMapper, Departm
 
     @Override
     public List<Department> getAllDepartments() {
-        return departmentMapper.getAllDepartmentsByParentId(-1);
+        return departmentMapper.getAllDepartments(-1);
+    }
+
+    @Override
+    public RespBean addDep(Department dep) {
+        dep.setEnabled(true);
+        departmentMapper.addDep(dep);
+        if(1 == dep.getResult()){
+            return RespBean.success("dep added successfully", dep);
+        }
+        return RespBean.error("dep added failed");
     }
 }

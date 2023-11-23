@@ -38,15 +38,18 @@ public class Department implements Serializable {
     private String name;
 
     @ApiModelProperty(value = "父id")
+    @TableField("parentId")
     private Integer parentId;
 
     @ApiModelProperty(value = "路径")
+    @TableField("depPath")
     private String depPath;
 
     @ApiModelProperty(value = "是否启用")
     private Boolean enabled;
 
     @ApiModelProperty(value = "是否上级")
+    @TableField("isParent")
     private Boolean isParent;
 
     @ApiModelProperty(value ="children list")

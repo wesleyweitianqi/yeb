@@ -16,7 +16,7 @@
         <collection
                 property="children"
                 ofType="com.wesley.pojo.Department"
-                select="com.wesley.mapper.DepartmentMapper.getAllDepartmentsByParentId"
+                select="com.wesley.mapper.DepartmentMapper.getAllDepartments"
                 column="id">
         </collection>
     </resultMap>
@@ -26,7 +26,17 @@
         id, name, parentId, depPath, enabled, isParent
     </sql>
 
-    <select id="getAllDepartmentsByParentId" resultMap="DepartmentWithChildren">
+    <select id="addDep" statementType="CALLABLE">
+        call addDep(
+        #{name, mode=IN, jdbcType = VARCHAR},
+        #{parentId, mode=IN, jdbcType=INTEGER},
+        #{enabled, mode=IN, jdbcType=BOOLEAN},
+        #{result, mode=OUT, jdbcType=INTEGER},
+        #{id, mode=OUT, jdbcType=INTEGER}
+        )
+    </select>
+
+    <select id="getAllDepartments" resultMap="DepartmentWithChildren">
         select
         <include refid="Base_Column_List" />
         from
