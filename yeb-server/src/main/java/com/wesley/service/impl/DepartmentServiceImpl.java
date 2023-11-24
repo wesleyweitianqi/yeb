@@ -31,9 +31,14 @@ public class DepartmentServiceImpl extends ServiceImpl<DepartmentMapper, Departm
     @Override
     public RespBean addDep(Department dep) {
         dep.setEnabled(true);
-        departmentMapper.addDep(dep);
-        if(1 == dep.getResult()){
-            return RespBean.success("dep added successfully", dep);
+        try{
+            departmentMapper.addDep(dep);
+            if(1 == dep.getResult()){
+                return RespBean.success("dep added successfully", dep);
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
         }
         return RespBean.error("dep added failed");
     }

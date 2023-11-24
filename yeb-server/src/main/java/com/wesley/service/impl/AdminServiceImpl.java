@@ -5,14 +5,11 @@ import com.wesley.config.security.JwtTokenUtil;
 import com.wesley.mapper.RoleMapper;
 import com.wesley.pojo.Admin;
 import com.wesley.mapper.AdminMapper;
-import com.wesley.pojo.Menu;
 import com.wesley.pojo.RespBean;
 import com.wesley.pojo.Role;
-import com.wesley.service.AdminService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wesley.service.IAdminService;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.poi.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -113,5 +110,10 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     @Override
     public List<Role> getRoles(Integer AdminId) {
         return roleMapper.getRoles(AdminId);
+    }
+
+    @Override
+    public  List<Admin> getAllAdmins(String keywords){
+        return adminMapper.getAllAdmins(((Admin) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId(), keywords);
     }
 }

@@ -15,4 +15,5 @@ public interface IAdminService extends IService<Admin> {
     public void changePasswordForAdmin(String newPassword);
     List<Role> getRoles(Integer AdminId);
 
+    List<Admin> getAllAdmins(String keywords);
 }

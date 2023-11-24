@@ -49,7 +49,11 @@
         from
         t_department
         where parentId = #{parentId}
-
+        union all
+        select
+        <include refid="Base_Column_List"/>
+        from t_department d
+        join getDepartmentWithChildren on d.parentId = getDepartmentWithChildren.id
     </select>
 
 </mapper>
