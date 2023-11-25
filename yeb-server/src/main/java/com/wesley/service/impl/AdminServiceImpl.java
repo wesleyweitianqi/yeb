@@ -2,9 +2,11 @@ package com.wesley.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.wesley.config.security.JwtTokenUtil;
+import com.wesley.mapper.AdminRoleMapper;
 import com.wesley.mapper.RoleMapper;
 import com.wesley.pojo.Admin;
 import com.wesley.mapper.AdminMapper;
+import com.wesley.pojo.AdminRole;
 import com.wesley.pojo.RespBean;
 import com.wesley.pojo.Role;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -51,6 +53,8 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
 
     @Autowired
     private  IAdminService iAdminService;
+    @Autowired
+    private AdminRoleMapper adminRoleMapper;
 
     /**
      * return token after login
@@ -116,4 +120,15 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     public  List<Admin> getAllAdmins(String keywords){
         return adminMapper.getAllAdmins(((Admin) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId(), keywords);
     }
+
+    @Override
+    public RespBean updateAdminRole(Integer adminId, Integer[] rids) {
+        adminRoleMapper.delete(new QueryWrapper<AdminRole>().eq("adminId", adminId));
+        Integer res = adminRoleMapper.addRole(adminId, rids);
+        if(rids.length == res){
+            return RespBean.success("update admin roles successfully");
+        }
+        return RespBean.error("update admin roles failed");
+    }
+
 }

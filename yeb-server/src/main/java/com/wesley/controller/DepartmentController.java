@@ -28,6 +28,8 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
+
+    //TODO: show list on swagger.
     @ApiOperation(value = "get All departments")
     @GetMapping("/")
     public List<Department> getAllDepartment(){

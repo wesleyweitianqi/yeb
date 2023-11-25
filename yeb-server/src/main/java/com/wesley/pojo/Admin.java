@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -56,6 +57,7 @@ public class Admin implements Serializable, UserDetails {
 
     @NotNull
     @ApiModelProperty(value = "enabled")
+    @Getter(AccessLevel.NONE)
     private Boolean enabled;
 
     @ApiModelProperty(value = "username")
