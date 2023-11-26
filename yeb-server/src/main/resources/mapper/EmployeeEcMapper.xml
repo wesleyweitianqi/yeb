@@ -13,9 +13,6 @@
         <result column="remark" property="remark" />
     </resultMap>
 
-    <!-- 通用查询结果列 -->
-    <sql id="Base_Column_List">
-        id, eid, ecDate, ecReason, ecPoint, ecType, remark
-    </sql>
+
 
 </mapper>
