@@ -2,6 +2,7 @@ package com.wesley.service;
 
 import com.wesley.pojo.Employee;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wesley.pojo.RespBean;
 import com.wesley.pojo.RespPageBean;
 
 import java.time.LocalDate;
@@ -16,4 +17,9 @@ import java.time.LocalDate;
  */
 public interface EmployeeService extends IService<Employee> {
     RespPageBean getEmployeePage(Integer currentPage, Integer size, Employee employee, LocalDate[] beginDateScope);
+
+    RespBean insertEmployee(Employee employee);
+
+    RespBean maxWorkId();
+
 }

@@ -98,6 +98,7 @@ public class Employee implements Serializable {
     private String workState;
 
     @ApiModelProperty(value = "workId")
+    @TableField("workId")
     private String workId;
 
     @ApiModelProperty(value = "contractTerm")

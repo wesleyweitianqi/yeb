@@ -25,7 +25,7 @@
         <result column="school" property="school" />
         <result column="beginDate" property="beginDate" />
         <result column="workState" property="workState" />
-        <result column="workID" property="workID" />
+        <result column="workId" property="workId" />
         <result column="contractTerm" property="contractTerm" />
         <result column="conversionTime" property="conversionTime" />
         <result column="notWorkDate" property="notWorkDate" />
@@ -77,30 +77,44 @@
         pos.id AS posId,
         pos.`name` AS posname
         FROM
-        t_employee e
-        LEFT JOIN t_nation n ON e.nationId = n.id
-        LEFT JOIN t_politics_status p ON e.politicId = p.id
-        LEFT JOIN t_department d ON e.departmentId = d.id
-        LEFT JOIN t_joblevel j ON e.jobLevelId = j.id
-        LEFT JOIN t_position pos ON e.posId = pos.id;
+
+        t_employee e,
+        t_nation n,
+        t_politics_status p,
+        t_department d,
+        t_joblevel j,
+        t_position pos
+        WHERE
+        e.nation_id = n.id
+        AND e.politic_id = p.id
+        AND e.department_id = d.id
+        AND e.job_level_id = j.id
+        AND e.pos_id = pos.id
+        WHERE
+        e.nation_id = n.id
+        AND e.politic_id = p.id
+        AND e.department_id = d.id
+        AND e.jobLevel_id = j.id
+        AND e.pos_id = pos.id
+
         <where>
             <if test="null!=employee.name and ''!=employee.name">
                 AND e.name like concat('%',#{employee.name},'%')
             </if>
             <if test="null!=employee.politicId">
-                AND e.politicId = #{employee.politicId}
+                AND e.politic_id = #{employee.politicId}
             </if>
             <if test="null!=employee.nationId">
-                AND e.nationId = #{employee.nationId}
+                AND e.nation_id = #{employee.nationId}
             </if>
             <if test="null!=employee.jobLevelId">
-                AND e.jobLevelId = #{employee.jobLevelId}
+                AND e.jobLevel_id = #{employee.jobLevelId}
             </if>
             <if test="null!=employee.posId">
-                AND e.posId = #{employee.posId}
+                AND e.pos_id = #{employee.posId}
             </if>
             <if test="null!=employee.departmentId">
-                AND e.departmentId = #{employee.departmentId}
+                AND e.department_id = #{employee.departmentId}
             </if>
             <if test="null!=employee.engageForm and ''!=employee.engageForm">
                 AND e.engageForm = #{employee.engageForm}
