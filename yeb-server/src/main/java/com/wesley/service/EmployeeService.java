@@ -6,6 +6,7 @@ import com.wesley.pojo.RespBean;
 import com.wesley.pojo.RespPageBean;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * <p>
@@ -22,4 +23,5 @@ public interface EmployeeService extends IService<Employee> {
 
     RespBean maxWorkId();
 
+    List<Employee> getEmployee(Integer id);
 }

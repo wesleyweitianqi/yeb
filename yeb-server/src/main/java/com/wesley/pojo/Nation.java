@@ -1,5 +1,6 @@
 package com.wesley.pojo;
 
+import cn.afterturn.easypoi.excel.annotation.Excel;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -32,6 +33,7 @@ public class Nation implements Serializable {
     private Integer id;
 
     @ApiModelProperty(value = "民族")
+    @Excel(name="nation")
     private String name;
 
 

@@ -1,14 +1,22 @@
 package com.wesley.controller;
 
 
+import cn.afterturn.easypoi.excel.ExcelExportUtil;
+import cn.afterturn.easypoi.excel.entity.ExportParams;
+import cn.afterturn.easypoi.excel.entity.enmus.ExcelType;
 import com.wesley.pojo.*;
 import com.wesley.service.*;
 import io.swagger.annotations.ApiOperation;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.net.URLEncoder;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -86,6 +94,53 @@ public class EmployeeController {
     @GetMapping("/deps")
     public List<Department> getAllDepartments(){
         return departmentService.getAllDepartments();
+    }
+
+    @ApiOperation(value="update Employee")
+    @PutMapping("/")
+    public RespBean updateEmp(@RequestBody Employee employee){
+        if(employeeService.updateById(employee)){
+            return RespBean.success("update employee successfully");
+        }
+        return RespBean.error("update employee failed");
+    }
+
+    @ApiOperation(value = "delete employee")
+    @DeleteMapping("/{id}")
+    public RespBean deleteEmp(@PathVariable Integer id){
+        if(employeeService.removeById(id)){
+            return RespBean.success("delete employee successfully");
+        }
+        return RespBean.error("delete employee failed");
+    }
+
+    @ApiOperation(value = "export employee to excel")
+    @GetMapping(value = "/export", produces = "application/octet-stream")
+    public void exportEmp(HttpServletResponse response) throws IOException {
+        List<Employee> list = employeeService.getEmployee(null);
+        ExportParams params = new ExportParams("employee table", "employeeTable", ExcelType.HSSF);
+        Workbook workbook = ExcelExportUtil.exportExcel(params, Employee.class, list);
+        ServletOutputStream outputStream = null;
+        try{
+            response.setContentType("application/octet-stream");
+            response.setHeader("content-disposition", "attachment;filename=" + URLEncoder.encode("employee table.xls", "UTF-8"));
+            outputStream = response.getOutputStream();
+            workbook.write(outputStream);
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally {
+            if(null != outputStream){
+                try{
+                    outputStream.flush();
+                    outputStream.close();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
+
+
+
     }
 }
 

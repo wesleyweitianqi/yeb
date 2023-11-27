@@ -1,5 +1,7 @@
 package com.wesley.pojo;
 
+import cn.afterturn.easypoi.excel.annotation.Excel;
+import cn.afterturn.easypoi.excel.annotation.ExcelEntity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import java.time.LocalDate;
@@ -36,37 +38,46 @@ public class Employee implements Serializable {
     private Integer id;
 
     @ApiModelProperty(value = "employee name")
+    @Excel(name="name")
     private String name;
 
     @ApiModelProperty(value = "sex")
+    @Excel(name="sex")
     private String gender;
 
     @ApiModelProperty(value = "birth")
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Shanghai")
+    @Excel(name="birth", width = 20, format = "yyyy-MM-dd")
     private LocalDate birthday;
 
     @ApiModelProperty(value = "id")
+    @Excel(name="id", width = 30)
     private String idCard;
 
-    @ApiModelProperty(value = "marriage")
+    @ApiModelProperty(value = "wedding")
+    @Excel(name = "wedding")
     private String wedlock;
 
     @ApiModelProperty(value = "ethic")
     private Integer nationId;
 
     @ApiModelProperty(value = "籍贯")
+    @Excel(name="nativePlace")
     private String nativePlace;
 
     @ApiModelProperty(value = "politic")
     private Integer politicId;
 
     @ApiModelProperty(value = "email adress")
+    @Excel(name="email", width = 30)
     private String email;
 
     @ApiModelProperty(value = "phone")
+    @Excel(name="phone", width = 15)
     private String phone;
 
     @ApiModelProperty(value = "联系地址")
+    @Excel(name="address", width = 40)
     private String address;
 
     @ApiModelProperty(value = "department")
@@ -130,21 +141,26 @@ public class Employee implements Serializable {
 
     @ApiModelProperty(value = "nation")
     @TableField(exist = false)
+    @ExcelEntity(name="nation")
     private Nation nation;
 
     @ApiModelProperty(value = "politicsStatus")
     @TableField(exist = false)
+    @ExcelEntity(name="politicsStatus")
     private PoliticsStatus politicsStatus;
 
     @ApiModelProperty(value ="department")
     @TableField(exist = false)
+    @ExcelEntity(name="department")
     private Department department;
 
     @ApiModelProperty(value ="joblevel")
     @TableField(exist = false)
+    @ExcelEntity(name="joblevel")
     private Joblevel joblevel;
 
     @ApiModelProperty(value ="position")
     @TableField(exist = false)
+    @ExcelEntity(name="position")
     private Position position;
 }
