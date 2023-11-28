@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome on board</title>
+</head>
+<body>
+Welcome <span th:text="${name}"></span> welcome to YRS, your information as below：
+<table border="1">
+    <tr>
+        <td>name</td>
+        <td th:text="${name}"></td>
+    </tr>
+    <tr>
+        <td>position</td>
+        <td th:text="${posName}"></td>
+    </tr>
+    <tr>
+        <td>joblevel</td>
+        <td th:text="${joblevelName}"></td>
+    </tr>
+    <tr>
+        <td>department</td>
+        <td th:text="${departmentName}"></td>
+    </tr>
+</table>
+<p></p>
+</body>
+</html>
