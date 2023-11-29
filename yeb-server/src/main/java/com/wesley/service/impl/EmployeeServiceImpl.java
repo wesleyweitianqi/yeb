@@ -12,6 +12,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
 
 import java.text.DecimalFormat;
@@ -33,6 +34,9 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 
     @Autowired
     private EmployeeMapper employeeMapper;
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     /**
      * @param currentPage
@@ -66,6 +70,8 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 
     @Override
     public List<Employee> getEmployee(Integer id) {
+        Employee emp = employeeMapper.getEmployee(id).get(0);
+        System.out.println(emp);
         return employeeMapper.getEmployee(id);
     }
 
@@ -82,7 +88,12 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         employee.setContractTerm(Double.parseDouble(decimalFormat.format(days/365.00))
         );
         Integer res = employeeMapper.insert(employee);
+        System.out.println("++++++++++++++++=============>");
+        System.out.println(res);
         if (res ==1) {
+            Employee emp = employeeMapper.getEmployee(employee.getId()).get(0);
+            System.out.println(emp.toString());
+            rabbitTemplate.convertAndSend("mail.welcome", emp);
             return RespBean.success("insert employee successfully");
         }
         return RespBean.error("insert failed");

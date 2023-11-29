@@ -5,7 +5,8 @@ spring:
     host: smtp.163.com
     protocol: smtp
     default-encoding: utf-8
-    password:
+    #export MAIL_PASSWORD=yourActualPassword
+    password: ${MAIL_PASSWORD}
     username: wesleywei1@163.com
     port: 25
 

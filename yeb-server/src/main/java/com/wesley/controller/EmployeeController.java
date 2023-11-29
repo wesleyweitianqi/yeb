@@ -63,6 +63,7 @@ public class EmployeeController {
     @ApiOperation(value = "add employee")
     @PostMapping("/")
     public RespBean addEmp(@RequestBody Employee employee) {
+        System.out.println("===============>add employee");
         return employeeService.insertEmployee(employee);
     }
     @ApiOperation(value = "get nations")

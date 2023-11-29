@@ -90,13 +90,6 @@
         AND e.department_id = d.id
         AND e.job_level_id = j.id
         AND e.pos_id = pos.id
-        WHERE
-        e.nation_id = n.id
-        AND e.politic_id = p.id
-        AND e.department_id = d.id
-        AND e.jobLevel_id = j.id
-        AND e.pos_id = pos.id
-
         <where>
             <if test="null!=employee.name and ''!=employee.name">
                 AND e.name like concat('%',#{employee.name},'%')
