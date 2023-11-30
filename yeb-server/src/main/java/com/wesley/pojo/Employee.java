@@ -52,6 +52,7 @@ public class Employee implements Serializable {
 
     @ApiModelProperty(value = "id")
     @Excel(name="id", width = 30)
+    @TableField("id_card")
     private String idCard;
 
     @ApiModelProperty(value = "wedding")
@@ -59,13 +60,16 @@ public class Employee implements Serializable {
     private String wedlock;
 
     @ApiModelProperty(value = "ethic")
+    @TableField("nation_id")
     private Integer nationId;
 
     @ApiModelProperty(value = "籍贯")
     @Excel(name="nativePlace")
+    @TableField("native_place")
     private String nativePlace;
 
     @ApiModelProperty(value = "politic")
+    @TableField("politic_id")
     private Integer politicId;
 
     @ApiModelProperty(value = "email adress")
@@ -81,19 +85,22 @@ public class Employee implements Serializable {
     private String address;
 
     @ApiModelProperty(value = "department")
+    @TableField("department_id")
     private Integer departmentId;
 
     @ApiModelProperty(value = "joblevelId")
+    @TableField("job_level_id")
     private Integer jobLevelId;
 
     @ApiModelProperty(value = "posId")
+    @TableField("pos_id")
     private Integer posId;
 
     @ApiModelProperty(value = "engageform")
+    @TableField("engage_form")
     private String engageForm;
 
-    @ApiModelProperty(value = "education")
-    private String tiptopDegree;
+
 
     @ApiModelProperty(value = "specialty")
     private String specialty;
@@ -103,20 +110,24 @@ public class Employee implements Serializable {
 
     @ApiModelProperty(value = "beginDate")
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Shanghai")
+    @TableField("begin_date")
     private LocalDate beginDate;
 
     @ApiModelProperty(value = "workState")
+    @TableField("work_state")
     private String workState;
 
     @ApiModelProperty(value = "workId")
-    @TableField("workId")
+    @TableField("work_id")
     private String workId;
 
     @ApiModelProperty(value = "contractTerm")
+    @TableField("contract_term")
     private Double contractTerm;
 
     @ApiModelProperty(value = "conversionTime")
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Shanghai")
+    @TableField("conversion_time")
     private LocalDate conversionTime;
 
     @ApiModelProperty(value = "notWorkDate")
@@ -126,10 +137,12 @@ public class Employee implements Serializable {
 
     @ApiModelProperty(value = "beginContract")
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Shanghai")
+    @TableField("begin_contract")
     private LocalDate beginContract;
 
     @ApiModelProperty(value = "endContract")
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Shanghai")
+    @TableField("end_contract")
     private LocalDate endContract;
 
     @ApiModelProperty(value = "workAge")
@@ -137,6 +150,7 @@ public class Employee implements Serializable {
     private Integer workAge;
 
     @ApiModelProperty(value = "salaryId")
+    @TableField("salary_id")
     private Integer salaryId;
 
     @ApiModelProperty(value = "nation")

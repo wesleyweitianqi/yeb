@@ -7,6 +7,7 @@ import cn.afterturn.easypoi.excel.entity.enmus.ExcelType;
 import com.wesley.pojo.*;
 import com.wesley.service.*;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.models.auth.In;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -55,8 +56,8 @@ public class EmployeeController {
                                           @RequestParam(defaultValue = "10") Integer size,
                                           @ModelAttribute Employee employee,
                                           LocalDate[] beginDateScope){
-        RespPageBean page = employeeService.getEmployeePage(currentPage, size, employee, beginDateScope);
-        System.out.println(page.toString());
+//        RespPageBean page = employeeService.getEmployeePage(currentPage, size, employee, beginDateScope);
+//        System.out.println(page.toString());
         return employeeService.getEmployeePage(currentPage, size, employee, beginDateScope);
     }
 
@@ -65,6 +66,13 @@ public class EmployeeController {
     public RespBean addEmp(@RequestBody Employee employee) {
         System.out.println("===============>add employee");
         return employeeService.insertEmployee(employee);
+    }
+
+    @ApiOperation(value = "get employee")
+    @GetMapping("/{id}")
+    public Employee getEmployee(@PathVariable Integer id){
+        System.out.println("get employyee id " + id);
+        return (Employee) employeeService.getEmployee(id).get(0);
     }
     @ApiOperation(value = "get nations")
     @GetMapping("/nations")

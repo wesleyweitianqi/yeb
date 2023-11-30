@@ -4,25 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0c99db-8ab0-420e-82b9-42bda3561117" name="Changes" comment="EasyPoi export excel file">
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/wesley/MailReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/wesley/VoaMailApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/RabbitMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/MailConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="4a0c99db-8ab0-420e-82b9-42bda3561117" name="Changes" comment="rabbitMQConfig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-generator/target/classes/com/wesley/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-generator/target/classes/com/wesley/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-generator/target/classes/com/wesley/generator/CodeGenerator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-generator/target/classes/com/wesley/generator/CodeGenerator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-generator/target/classes/com/wesley/generator/CodeGenerator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-generator/target/classes/com/wesley/generator/CodeGenerator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-generator/target/classes/com/wesley/generator/CodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-generator/target/classes/com/wesley/generator/CodeGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/config/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/Swagger2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/EmployeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/wesley/YebServerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/wesley/YebServerApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701054526602</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="rabbitMQConfig">
+      <created>1701231401316</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1701231401316</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -358,7 +353,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="yeb initialize" />
     <MESSAGE value="code generator" />
     <MESSAGE value="implement jwt" />
     <MESSAGE value="login service" />
@@ -383,7 +377,8 @@
     <MESSAGE value="employee management and pagination" />
     <MESSAGE value="add employee with foreign id list" />
     <MESSAGE value="EasyPoi export excel file" />
-    <option name="LAST_COMMIT_MESSAGE" value="EasyPoi export excel file" />
+    <MESSAGE value="rabbitMQConfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="rabbitMQConfig" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

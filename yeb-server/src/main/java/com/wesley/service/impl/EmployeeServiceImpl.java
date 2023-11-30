@@ -70,9 +70,16 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 
     @Override
     public List<Employee> getEmployee(Integer id) {
-        Employee emp = employeeMapper.getEmployee(id).get(0);
-        System.out.println(emp);
-        return employeeMapper.getEmployee(id);
+        try{
+
+            Employee emp = employeeMapper.getEmployee(id).get(0);
+            System.out.println(emp.toString());
+            return employeeMapper.getEmployee(id);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+
     }
 
     /**
@@ -87,15 +94,21 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         DecimalFormat decimalFormat = new DecimalFormat("##.00");
         employee.setContractTerm(Double.parseDouble(decimalFormat.format(days/365.00))
         );
-        Integer res = employeeMapper.insert(employee);
-        System.out.println("++++++++++++++++=============>");
-        System.out.println(res);
-        if (res ==1) {
-            Employee emp = employeeMapper.getEmployee(employee.getId()).get(0);
-            System.out.println(emp.toString());
-            rabbitTemplate.convertAndSend("mail.welcome", emp);
-            return RespBean.success("insert employee successfully");
+            System.out.println("++++++++++++++++=============>");
+        try{
+
+            Integer res = employeeMapper.insert(employee);
+            System.out.println(res);
+            if (res ==1) {
+                Employee emp = employeeMapper.getEmployee(employee.getId()).get(0);
+                System.out.println(emp.toString());
+                rabbitTemplate.convertAndSend("mail.welcome", emp);
+                return RespBean.success("insert employee successfully");
+            }
+        }catch(Exception e){
+            e.printStackTrace();
         }
+
         return RespBean.error("insert failed");
     }
 }
