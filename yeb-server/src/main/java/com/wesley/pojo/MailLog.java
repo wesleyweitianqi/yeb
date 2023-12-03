@@ -1,5 +1,6 @@
 package com.wesley.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.time.LocalDateTime;
 import java.io.Serializable;
@@ -26,31 +27,36 @@ public class MailLog implements Serializable {
 
     private static final long serialVersionUID=1L;
 
-    @ApiModelProperty(value = "消息id")
+    @ApiModelProperty(value = "msgId")
+    @TableField("msg_id")
     private String msgId;
 
-    @ApiModelProperty(value = "接收员工id")
+    @ApiModelProperty(value = "ReciverId")
     private Integer eid;
 
-    @ApiModelProperty(value = "状态（0:消息投递中 1:投递成功 2:投递失败）")
+    @ApiModelProperty(value = "status（0:sending 1:succeed 2:fail）")
     private Integer status;
 
-    @ApiModelProperty(value = "路由键")
+    @ApiModelProperty(value = "routeKey")
+    @TableField("route_key")
     private String routeKey;
 
-    @ApiModelProperty(value = "交换机")
+    @ApiModelProperty(value = "exchange")
     private String exchange;
 
-    @ApiModelProperty(value = "重试次数")
+    @ApiModelProperty(value = "retrycount")
     private Integer count;
 
-    @ApiModelProperty(value = "重试时间")
+    @ApiModelProperty(value = "tryTime")
+    @TableField("try_time")
     private LocalDateTime tryTime;
 
-    @ApiModelProperty(value = "创建时间")
+    @ApiModelProperty(value = "createDate")
+    @TableField("create_time")
     private LocalDateTime createTime;
 
-    @ApiModelProperty(value = "更新时间")
+    @ApiModelProperty(value = "updateDate")
+    @TableField("update_time")
     private LocalDateTime updateTime;
 
 

@@ -56,8 +56,7 @@ public class EmployeeController {
                                           @RequestParam(defaultValue = "10") Integer size,
                                           @ModelAttribute Employee employee,
                                           LocalDate[] beginDateScope){
-//        RespPageBean page = employeeService.getEmployeePage(currentPage, size, employee, beginDateScope);
-//        System.out.println(page.toString());
+
         return employeeService.getEmployeePage(currentPage, size, employee, beginDateScope);
     }
 
