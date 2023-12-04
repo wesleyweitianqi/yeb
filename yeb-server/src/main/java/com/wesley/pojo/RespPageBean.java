@@ -11,6 +11,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RespPageBean {
-    private  long total;
+    private long total;
     private List<?> data;
 }

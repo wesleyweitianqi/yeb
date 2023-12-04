@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0c99db-8ab0-420e-82b9-42bda3561117" name="Changes" comment="debug swagger">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/task/MailTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/wesley/App.java" beforeDir="false" />
+    <list default="true" id="4a0c99db-8ab0-420e-82b9-42bda3561117" name="Changes" comment="EnableScheduling">
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/config/WebSocketConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/wesley/MailReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/wesley/MailReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/wesley/VoaMailApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/wesley/VoaMailApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/config/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/YebServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/YebServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/MailLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/MailLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MailLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MailLogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/wesley/YebServerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/wesley/YebServerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/RespPageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/wesley/pojo/RespPageBean.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -356,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701320152720</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="EnableScheduling">
+      <created>1701576089913</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1701576089913</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,7 +380,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implement jwt" />
     <MESSAGE value="login service" />
     <MESSAGE value="SecurityConfig setup" />
     <MESSAGE value="JwtAuthentication" />
@@ -408,7 +404,8 @@
     <MESSAGE value="EasyPoi export excel file" />
     <MESSAGE value="rabbitMQConfig" />
     <MESSAGE value="debug swagger" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug swagger" />
+    <MESSAGE value="EnableScheduling" />
+    <option name="LAST_COMMIT_MESSAGE" value="EnableScheduling" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
