@@ -60,7 +60,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 "/change-password",
                 "/captcha",
                 "/login",
-                "/logout"
+                "/logout",
+                "/ws/**"
         );
     }
 
