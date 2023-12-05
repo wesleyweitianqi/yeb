@@ -17,4 +17,6 @@ public interface IAdminService extends IService<Admin> {
 
     List<Admin> getAllAdmins(String keywords);
     RespBean updateAdminRole(Integer adminId, Integer[] rids);
+
+    RespBean updatePassword(String oldPass, String pass, Integer adminId);
 }
