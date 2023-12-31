@@ -142,7 +142,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
             if(1 == result) return RespBean.success("update successfully");
             return RespBean.error("update failed");
         }
-
+        return RespBean.error("update failed");
     }
 
 }
